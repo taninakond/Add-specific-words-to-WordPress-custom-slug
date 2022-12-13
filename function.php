@@ -10,8 +10,8 @@ function custom_pre_post_link($permalink, $post, $leavename){
 	return $permalink;
 }
 
-function custom_post_rewrite_rules($pos_rewrite){
-	if(is_array($pos_rewrite)){
+function custom_post_rewrite_rules($post_rewrite){
+	if(is_array($post_rewrite)){
 		$rw_prefix = [];
 		foreach($post_rewrite as $k => $v){
 			$rw_prefix['your-prefix/'.$k] = $v;
